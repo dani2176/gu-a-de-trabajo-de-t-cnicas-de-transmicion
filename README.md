@@ -1,7 +1,7 @@
 
 # Evaluación 1: Transmisión de Señales
 
-## Datos del estudiante
+## Datos de estudiantes
 
 **Nombre:** Daniel Videla, NIcolas Bastidas
 **Asignatura:** tecnicas de transmicion
