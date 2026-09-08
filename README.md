@@ -152,3 +152,175 @@ La principal diferencia entre ambas señales es que la **señal analógica cambi
 
 Por esta razón, las señales digitales son ampliamente utilizadas en computadores y redes, ya que permiten procesar, almacenar y transmitir información de una manera más sencilla y resistente a ciertos tipos de interferencia.
 
+========
+# 1.5 Dominio del tiempo
+
+El dominio del tiempo permite observar cómo cambia una señal a medida que transcurre el tiempo.
+
+En este dominio podemos observar características como:
+
+- Amplitud.
+- Período.
+- Frecuencia.
+- Cambios de la forma de onda.
+
+### Representación
+
+La señal puede representarse en el dominio del tiempo mediante una gráfica donde el eje horizontal corresponde al tiempo y el eje vertical corresponde a la amplitud.
+
+```text
+Amplitud
+   │
+   │       ╭──╮          ╭──╮
+   │      ╱    ╲        ╱    ╲
+   │     ╱      ╲      ╱      ╲
+   │────╯        ╰────╯        ╰────
+   │
+   └────────────────────────────────── Tiempo
+
+========
+# 1.6 Dominio de la frecuencia
+
+El dominio de la frecuencia permite analizar qué componentes de frecuencia existen dentro de una señal.
+
+A diferencia del dominio del tiempo, donde se observa principalmente cómo cambia una señal a medida que transcurre el tiempo, en el dominio de la frecuencia se analiza cómo se distribuye la información de la señal entre diferentes frecuencias.
+
+### Características
+
+En el dominio de la frecuencia podemos observar:
+
+- Frecuencias presentes en una señal.
+- Amplitud de cada componente de frecuencia.
+- Distribución de la energía de la señal.
+- Componentes que forman una señal compleja.
+- Ancho de banda de una señal.
+
+### Representación
+
+Una señal compleja puede estar formada por diferentes componentes de frecuencia. Estas componentes pueden representarse mediante picos en un gráfico de frecuencia.
+
+```text
+Amplitud
+   │
+   │          │
+   │     │    │       │
+   │     │    │       │
+   │     │    │       │
+   └─────┴────┴───────┴────────── Frecuencia
+         f1   f2      f3
+```
+
+### Interpretación
+
+El **eje horizontal** representa la frecuencia, mientras que el **eje vertical** representa la amplitud de cada componente.
+
+Por ejemplo, si una señal presenta tres picos en `f1`, `f2` y `f3`, significa que la señal contiene componentes correspondientes a esas tres frecuencias.
+
+========
+
+# 1.7 Transformada de Fourier
+
+La Transformada de Fourier es una herramienta matemática que permite transformar una señal desde el **dominio del tiempo** al **dominio de la frecuencia**.
+
+De esta manera, una señal que puede ser difícil de analizar directamente en el tiempo puede estudiarse observando las diferentes frecuencias que la componen.
+
+### Representación
+
+El proceso de transformación puede representarse de la siguiente manera:
+
+```text
+┌──────────────────────┐
+│  Señal en el tiempo  │
+└──────────┬───────────┘
+           │
+           │ Transformada
+           │ de Fourier
+           ▼
+┌──────────────────────┐
+│ Señal en frecuencia  │
+└──────────────────────┘
+```
+
+### ¿Cómo funciona?
+
+La Transformada de Fourier toma una señal que varía en el tiempo y permite identificar las diferentes frecuencias que están presentes en ella.
+
+Por ejemplo, una señal compleja puede estar formada por varias ondas de diferentes frecuencias. Al aplicar la Transformada de Fourier, estas componentes pueden observarse individualmente en el dominio de la frecuencia.
+
+### Importancia
+
+La Transformada de Fourier es importante para el análisis y procesamiento de señales, ya que permite estudiar:
+
+- Frecuencias presentes.
+- Componentes de una señal.
+- Ancho de banda.
+- Espectro de una señal.
+- Comportamiento de sistemas de comunicación.
+
+### Conclusión
+
+El dominio de la frecuencia permite conocer de qué componentes está formada una señal, mientras que la Transformada de Fourier proporciona una herramienta matemática para realizar el cambio desde el dominio del tiempo al dominio de la frecuencia.
+
+========
+2. Parámetros Técnicos de Transmisión
+
+Los parámetros técnicos permiten describir y analizar las características de una señal y de un enlace de comunicación.
+
+========
+## 2.1 Frecuencia
+
+La **frecuencia** indica cuántos ciclos de una señal ocurren por segundo.
+
+### Símbolo
+
+**f**
+
+### Unidad
+
+**Hertz (Hz)**
+
+### Fórmula
+
+La frecuencia se puede calcular utilizando la siguiente fórmula:
+
+$$
+f = \frac{1}{T}
+$$
+
+Donde:
+
+- **f** = frecuencia, medida en Hertz (Hz).
+- **T** = período, medido en segundos (s).
+
+### Ejemplo
+
+Si una señal tiene un período de:
+
+$$
+T = 0,01\ s
+$$
+
+Entonces, se reemplaza el valor del período en la fórmula:
+
+$$
+f = \frac{1}{0,01}
+$$
+
+Por lo tanto:
+
+$$
+f = 100\ Hz
+$$
+
+### Interpretación
+
+Esto significa que la señal realiza **100 ciclos por segundo**.
+
+Mientras menor sea el período de una señal, mayor será su frecuencia. Por el contrario, mientras mayor sea el período, menor será su frecuencia.
+
+### Relación entre frecuencia y período
+
+La frecuencia y el período son magnitudes inversamente proporcionales:
+
+- **Mayor frecuencia → menor período.**
+- **Menor frecuencia → mayor período.**
