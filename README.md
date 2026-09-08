@@ -37,22 +37,25 @@ Señales de control.
 
 Un sistema de comunicación básico puede representarse de la siguiente manera:
 
-┌──────────┐
-│ EMISOR   │
-└────┬─────┘
-     │
-     │ Señal
-     ▼
-┌──────────┐
-│  MEDIO   │
-│   DE     │
-│TRANSMISIÓN│
-└────┬─────┘
-     │
-     ▼
-┌──────────┐
-│ RECEPTOR │
-└──────────┘
+```text
+┌─────────────┐
+│   EMISOR    │
+└──────┬──────┘
+       │
+       │ Señal
+       ▼
+┌─────────────┐
+│    MEDIO    │
+│     DE      │
+│ TRANSMISIÓN │
+└──────┬──────┘
+       │
+       │
+       ▼
+┌─────────────┐
+│   RECEPTOR  │
+└─────────────┘
+```
 
 ========
 1.2 Señal analógica
@@ -66,14 +69,21 @@ Tiene variación continua.
 Puede tomar muchos valores de amplitud.
 Puede verse afectada por ruido e interferencias.
 Se puede representar mediante una onda continua.
-Representación
+
+### Representación
+
+La señal analógica puede representarse mediante una onda continua:
+
+```text
 Amplitud
    │
-   │      /¯\       /¯\
-   │     /   \     /   \
-   │____/     \___/     \____
+   │       ╭──╮          ╭──╮
+   │      ╱    ╲        ╱    ╲
+   │     ╱      ╲      ╱      ╲
+   │────╯        ╰────╯        ╰────
    │
-   └────────────────────────── Tiempo
+   └────────────────────────────────── Tiempo
+```
 
 ========
 1.3 Señal digital
@@ -85,14 +95,21 @@ Utiliza valores discretos.
 Los datos pueden representarse mediante bits.
 Es utilizada ampliamente en sistemas informáticos y de redes.
 Permite almacenar y procesar información digitalmente.
-Representación
+
+### Representación
+
+La señal digital puede representarse mediante niveles discretos, generalmente asociados a los valores 0 y 1:
+
+```text
 Amplitud
    │
-  1│ ┌─────┐       ┌─────┐
-   │ │     │       │     │
-  0│─┘     └───────┘     └──────
+ 1 │     ┌──────┐          ┌──────┐
+   │     │      │          │      │
+   │     │      │          │      │
+ 0 │─────┘      └──────────┘      └──────
    │
-   └────────────────────────── Tiempo
+   └────────────────────────────────────── Tiempo
+```
 
 ========
 ## 1.4 Comparación entre señal analógica y digital
