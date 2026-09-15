@@ -168,8 +168,8 @@ $$
 
         <──────────────>
                Vpp
----
-Interpretación
+
+###Interpretación
 
 El voltaje pico a pico corresponde a la diferencia total entre el valor máximo y el valor mínimo de la señal.
 ---
