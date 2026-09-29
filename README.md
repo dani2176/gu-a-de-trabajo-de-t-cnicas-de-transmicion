@@ -842,6 +842,7 @@ Entre ellas se incluyen documentación y material técnico de:
 # 👨‍🎓 Autor
 
 **Daniel Videla**
+**NIcolas Bastidas**
 
 📚 Redes de Datos
 📡 Área de Telecomunicaciones
