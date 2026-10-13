@@ -1,0 +1,102 @@
+# 27.7 · Medición de amplitud, frecuencia y período
+
+> **Área:** Osciloscopio · Instrumentación y transmisión de señales  
+> **Guía:** [Índice y navegación](./README.md)
+
+Aquí se reúnen los conceptos y cálculos necesarios para **interpretar la señal que aparece en la pantalla**.
+
+| Concepto | Definición | Unidad |
+|---|---|---|
+| `Vmax` | Mayor nivel observado | V |
+| `Vmin` | Menor nivel observado | V |
+| `Vpp` | Diferencia entre máximo y mínimo | V |
+| `Vp` | Valor pico respecto al nivel de referencia de la componente alterna | V |
+| `Offset DC` | Desplazamiento medio de la señal respecto de 0 V | V |
+| `T` | Tiempo de un ciclo completo | s |
+| `f` | Ciclos por segundo | Hz |
+| `Vrms` | Valor eficaz del voltaje | V |
+
+## Relaciones fundamentales
+
+**Voltaje pico a pico**:
+
+$$
+\boxed{V_{pp}=V_{max}-V_{min}}
+$$
+
+**Frecuencia y período**:
+
+$$
+\boxed{f=\frac{1}{T}}\qquad\boxed{T=\frac{1}{f}}
+$$
+
+**Señal senoidal ideal centrada en 0 V**:
+
+$$
+\boxed{V_p=\frac{V_{pp}}{2}}\qquad\boxed{V_{RMS}=\frac{V_p}{\sqrt2}}
+$$
+
+> [!NOTE]
+> Las fórmulas `Vp = Vpp/2` y `Vrms = Vp/√2` se usan aquí para la **componente senoidal simétrica**. El valor RMS de una señal con offset DC o de otra forma de onda requiere un cálculo distinto. No todas las funciones `RMS` de un equipo muestran lo mismo: revisa si miden RMS total o solo componente AC.
+
+---
+
+## Ejercicio completo de medición
+
+## Datos del generador
+
+| Parámetro | Valor configurado |
+|---|---:|
+| Forma de onda | Senoidal |
+| Frecuencia | `1 kHz` |
+| Voltaje pico a pico | `4 Vpp` |
+| Offset DC | `0 V` |
+| Carga mostrada | `Hi-Z`, si corresponde a la conexión utilizada |
+
+## A. Voltaje pico a pico
+
+La señal ocupa **4 divisiones verticales** y el canal está ajustado a **1 V/div**.
+
+$$
+V_{pp}=4\ \text{div}\times1\ \frac{V}{\text{div}}=\boxed{4\ V}
+$$
+
+Como la senoidal es simétrica y no tiene offset:
+
+$$
+V_p=\frac{4}{2}=\boxed{2\ V}
+$$
+
+## B. Período
+
+Un ciclo ocupa **4 divisiones horizontales** y la base de tiempos está en **250 µs/div**.
+
+$$
+T=4\times250\ \mu s=\boxed{1000\ \mu s=1\ ms}
+$$
+
+## C. Frecuencia
+
+$$
+f=\frac{1}{0.001\ s}=\boxed{1000\ Hz=1\ kHz}
+$$
+
+## D. Voltaje eficaz de la componente senoidal
+
+$$
+V_{RMS}=\frac{2}{\sqrt2}\approx\boxed{1.41\ V}
+$$
+
+## Interpretación
+
+La lectura es consistente con una **senoidal ideal de 1 kHz y 4 Vpp sin componente continua**. En un experimento real es normal observar pequeñas diferencias por resolución, tolerancias, ruido, sondas y ajustes del generador. No se debe informar un resultado como “idéntico” sin haber registrado la medición real.
+
+---
+
+## Diferencia entre cálculo esperado y medida real
+
+Los resultados del ejercicio son **valores teóricos**. En el laboratorio anota los valores que realmente indique la pantalla, junto con sus escalas, el factor de la sonda y el tipo de medición RMS usado.
+
+---
+
+[← Tema anterior: Cómo realizar una medición](./27.6-como-realizar-una-medicion.md) | [🏠 Índice del osciloscopio](./README.md) | [Tema siguiente: Sonda X1 y X10: conexión, compensación y seguridad →](./27.8-medicion-con-sonda-x1-y-x10.md)
